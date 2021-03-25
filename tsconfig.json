@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    // 指定ECMAScript目标版本
+    "target": "ESNext",
+    // 编译过程中需要引入的库文件的列表。
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["vite/client"],
+    "allowJs": false,
+    // 忽略所有的声明文件（ *.d.ts）的类型检查
+    "skipLibCheck": false,
+    "esModuleInterop": false,
+    // 允许从没有设置默认导出的模块中默认导入，这并不影响代码的输出，仅为了类型检查
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    // 指定生成哪个模块系统代码
+    "module": "ESNext",
+    // 决定如何处理模块
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    // 解析非相对模块名的基准目录
+    "baseUrl": ".",
+    // 配置 vite 路径映射
+    "paths": {
+      // @
+      "@/*": ["./src/*"],
+      // @pages
+      "@pages/*": ["./src/pages/*"],
+      // @components
+      "@components/*": ["./src/components/*"],
+      // @assets
+      "@assets/*": ["./src/assets/*"]
+    }
+  },
+  "include": ["./src"]
+}
