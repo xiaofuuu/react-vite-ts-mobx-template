@@ -1,16 +1,36 @@
 import { defineConfig } from 'vite';
 import reactRefresh from '@vitejs/plugin-react-refresh';
-// 引入resolveld里路径alias的钩子
 import tsconfigPaths from 'vite-tsconfig-paths';
+import vitePluginImp from 'vite-plugin-imp';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     // react 快速刷新
     reactRefresh(),
+
     // 在tsconfig.json里配置的路径可以映射到 vite 里
     tsconfigPaths(),
+
+    // antd按需加载
+    vitePluginImp({
+      libList: [
+        {
+          libName: 'antd',
+          style: (name) => `antd/lib/${name}/style/index.less`,
+        },
+      ],
+    }),
   ],
+
+  css: {
+    preprocessorOptions: {
+      less: {
+        // 按需加载相关 支持内联 javascript
+        javascriptEnabled: true,
+      },
+    },
+  },
 
   // 配置相对路径
   base: './',
