@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { MenuInfo } from 'rc-menu/lib/interface';
 
 const Nav: React.FC = () => {
-  const [current, changeCurrent] = useState<string>('page1');
+  const [current, changeCurrent] = useState<string>('/page1');
   const history = useHistory();
 
   const handleClick = (e: MenuInfo) => {

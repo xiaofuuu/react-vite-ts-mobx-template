@@ -22,7 +22,7 @@ function App() {
             计算属性：
             {globStore.compGet}
           </h3>
-          <Button onClick={globStore.los}>-</Button>
+          <Button onClick={globStore.sub}>-</Button>
         </div>
         <RouterContainer />
       </Router>

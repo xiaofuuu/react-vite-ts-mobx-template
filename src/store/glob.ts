@@ -11,12 +11,12 @@ class GlobStore {
     this.count += 1;
   };
 
-  los = () => {
-    this.count -= 1;
+  sub = () => {
+    this.count >= 1 && this.count--;
   };
 
   get compGet() {
-    return this.count * 2;
+    return this.count >= 0 && this.count * 2;
   }
 }
 
