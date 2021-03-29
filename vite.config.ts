@@ -6,13 +6,12 @@ import vitePluginImp from 'vite-plugin-imp';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    // react 快速刷新
     reactRefresh(),
 
-    // 在tsconfig.json里配置的路径可以映射到 vite 里
+    // 在tsconfig.json里配置的路径映射到 vite 配置里
     tsconfigPaths(),
 
-    // antd按需加载
+    // 按需加载
     vitePluginImp({
       libList: [
         {
@@ -32,7 +31,6 @@ export default defineConfig({
     },
   },
 
-  // 配置相对路径
   base: './',
 
   // 配置路径别名
@@ -43,9 +41,7 @@ export default defineConfig({
   },
 
   server: {
-    // 自动打开浏览器
     open: true,
-    // 端口号
     port: 996,
   },
 
