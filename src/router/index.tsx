@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { FC, lazy, Suspense } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
-const LzPage1 = React.lazy(() => import('@pages/page1'));
-const LzPage2 = React.lazy(() => import('@pages/page2'));
-const LzPage3 = React.lazy(() => import('@pages/page3'));
+const LzPage1 = lazy(() => import('@pages/page1'));
+const LzPage2 = lazy(() => import('@pages/page2'));
+const LzPage3 = lazy(() => import('@pages/page3'));
 
-const RouterContainer: React.FC = () => (
+const RouterContainer: FC = () => (
   <div className="router-container">
-    <React.Suspense fallback={<div>loading...</div>}>
+    <Suspense fallback={<div>loading...</div>}>
       <Router>
         <Switch>
           <Route path="/page1" component={LzPage1} />
@@ -15,7 +15,7 @@ const RouterContainer: React.FC = () => (
           <Route path="/page3" component={LzPage3} />
         </Switch>
       </Router>
-    </React.Suspense>
+    </Suspense>
   </div>
 );
 
