@@ -2,8 +2,8 @@
 
 **基于 vite 构建包含 react-mobx+antd(按需)+typescript+eslint+scss+lazy 的起步应用**
 
-- ## `git clone`
+- `git clone`
 
-- ## `yarn` or `npm install`
+- `yarn` or `npm install`
 
-- ## `yarn dev`
+- `yarn dev`
