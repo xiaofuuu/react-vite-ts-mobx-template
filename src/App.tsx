@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'antd';
 import { observer } from 'mobx-react';
 import { HashRouter as Router } from 'react-router-dom';
-import Nav from '@/components/Nav'
+import Nav from '~/components/Nav';
 import RouterContainer from './router/index';
 import globStore from './store/glob';
 import './App.scss';

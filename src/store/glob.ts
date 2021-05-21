@@ -1,3 +1,5 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable no-unused-expressions */
 import { makeAutoObservable } from 'mobx';
 
 class GlobStore {

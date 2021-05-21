@@ -15,14 +15,14 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <Menu onClick={(e) => handleClick(e)} selectedKeys={[current]} mode="horizontal">
-      <Menu.Item key="/page1" icon={<AppstoreOutlined />}>
+    <Menu onClick={(e) => handleClick(e)} selectedKeys={[current]} mode='horizontal'>
+      <Menu.Item key='/page1' icon={<AppstoreOutlined />}>
         Navigation One
       </Menu.Item>
-      <Menu.Item key="/page2" icon={<AppstoreOutlined />}>
+      <Menu.Item key='/page2' icon={<AppstoreOutlined />}>
         Navigation Two
       </Menu.Item>
-      <Menu.Item key="/page3" icon={<AppstoreOutlined />}>
+      <Menu.Item key='/page3' icon={<AppstoreOutlined />}>
         Navigation Three
       </Menu.Item>
     </Menu>
