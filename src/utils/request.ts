@@ -1,12 +1,11 @@
 import axios from 'axios';
-// import qs from 'qs';
+import qs from 'qs';
 
 const httpPost = function (api: string, data: object, callback: any) {
   if (!data) data = {};
-  // let params = qs.stringify(data);
+  let params = qs.stringify(data);
   return new Promise((resolve, reject) => {
-    // axios.post(api, params)
-    axios.post(api, data).then((res) => {
+    axios.post(api, params).then((res) => {
       if (res) {
         resolve(res);
         callback && callback(res);
