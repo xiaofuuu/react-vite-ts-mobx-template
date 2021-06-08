@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import reactRefresh from '@vitejs/plugin-react-refresh';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import vitePluginImp from 'vite-plugin-imp';
+import vitePluginReactImp from 'vite-plugin-react-imp';
 
 export default defineConfig({
   plugins: [
@@ -9,11 +9,11 @@ export default defineConfig({
 
     tsconfigPaths(),
 
-    vitePluginImp({
+    vitePluginReactImp({
       libList: [
         {
           libName: 'antd',
-          style: (name) => `antd/lib/${name}/style/index.less`,
+          style: (name) => `antd/es/${name}/style/css.js`,
         },
       ],
     }),
@@ -30,8 +30,7 @@ export default defineConfig({
   base: './',
 
   resolve: {
-    alias: {
-    },
+    alias: {},
   },
 
   server: {

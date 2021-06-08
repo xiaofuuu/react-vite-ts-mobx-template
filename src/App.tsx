@@ -9,13 +9,15 @@ import './App.scss';
 import { httpGet } from '~/utils/request';
 
 function App() {
+  const { add, count, compGet, sub } = globStore;
+
   useEffect(() => {
     getData();
   }, []);
 
   const getData = async () => {
-    const data = await httpGet('https://getman.cn/mock/demo01')
-    console.log(data)
+    const data = await httpGet('https://getman.cn/mock/demo01');
+    console.log(data);
   };
 
   return (
@@ -23,16 +25,16 @@ function App() {
       <Router>
         <Nav />
         <div className="content">
-          <Button onClick={globStore.add}>+</Button>
+          <Button onClick={add}>+</Button>
           <h3>
             当前值：
-            {globStore.count}
+            {count}
           </h3>
           <h3>
             计算属性：
-            {globStore.compGet}
+            {compGet}
           </h3>
-          <Button onClick={globStore.sub}>-</Button>
+          <Button onClick={sub}>-</Button>
         </div>
         <RouterContainer />
       </Router>
