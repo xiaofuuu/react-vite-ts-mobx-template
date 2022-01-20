@@ -1,7 +1,7 @@
 import axios from 'axios';
 import qs from 'qs';
 
-const httpPost = function (api: string, data: object, callback: any) {
+const httpPost = function (api: string, data: object, callback: Function) {
   if (!data) data = {};
   let params = qs.stringify(data);
   return new Promise((resolve, reject) => {

@@ -1,9 +1,9 @@
 import React, { FC, lazy, Suspense } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
-const LzPage1 = lazy(() => import('~pages/page1'));
-const LzPage2 = lazy(() => import('~pages/page2'));
-const LzPage3 = lazy(() => import('~pages/page3'));
+const LzPage1 = lazy(() => import('@/pages/page1'));
+const LzPage2 = lazy(() => import('@/pages/page2'));
+const LzPage3 = lazy(() => import('@/pages/page3'));
 
 const RouterContainer: FC = () => (
   <div className='router-container'>

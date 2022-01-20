@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "基于 vite工具 构建包含 react-mobx+antd+typescript+eslint+scss+lazy 的起步应用",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint": "eslint src/"

@@ -35,7 +35,7 @@ export default defineConfig({
 
   server: {
     open: true,
-    port: 996,
+    port: 9966,
   },
 
   build: {

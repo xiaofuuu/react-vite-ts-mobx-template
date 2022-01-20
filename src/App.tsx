@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { HashRouter as Router } from 'react-router-dom';
 import { Button } from 'antd';
 import { observer } from 'mobx-react';
-import { HashRouter as Router } from 'react-router-dom';
-import Nav from '~/components/Nav';
-import RouterContainer from './router/index';
-import globStore from './store/glob';
-import './App.scss';
-import { httpGet } from '~/utils/request';
+import Nav from '@/components/Nav';
+import RouterContainer from '@/router/index';
+import globStore from '@/store/glob';
+import { httpGet } from '@/utils/request';
+import '@/styles/App.scss';
 
 function App() {
   const { add, count, compGet, sub } = globStore;
