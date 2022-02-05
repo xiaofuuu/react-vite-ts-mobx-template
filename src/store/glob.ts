@@ -1,25 +1,25 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-unused-expressions */
-import { makeAutoObservable } from 'mobx';
+import { makeAutoObservable } from 'mobx'
 
 class GlobStore {
   constructor() {
-    makeAutoObservable(this);
+    makeAutoObservable(this)
   }
 
-  count = 0;
+  count = 0
 
   add = () => {
-    this.count += 1;
-  };
+    this.count += 1
+  }
 
   sub = () => {
-    this.count >= 1 && this.count--;
-  };
+    this.count >= 1 && this.count--
+  }
 
   get compGet() {
-    return this.count >= 0 && this.count * 2;
+    return this.count >= 0 && this.count * 2
   }
 }
 
-export default new GlobStore();
+export default new GlobStore()

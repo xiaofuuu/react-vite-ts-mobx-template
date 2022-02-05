@@ -1,10 +1,10 @@
-import React from 'react';
-import { Empty } from 'antd';
+import React from 'react'
+import { Empty } from 'antd'
 
 const Page3: React.FC = () => (
   <div>
     <Empty />
   </div>
-);
+)
 
-export default Page3;
+export default Page3
