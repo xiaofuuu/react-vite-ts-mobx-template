@@ -13,7 +13,7 @@ export interface DataParamsType {
 }
 
 export function apiGetData(url: string, params: DataParamsType) {
-  $http.get<DataType>({
+  return $http.get<DataType>({
     url,
     params,
     // showLoading: false,
